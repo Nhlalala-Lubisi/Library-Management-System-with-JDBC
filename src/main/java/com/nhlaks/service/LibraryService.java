@@ -25,25 +25,33 @@ public class LibraryService {
             System.out.println("4. Delete Book");
             System.out.println("5. Register User");
             System.out.println("6. View Users");
-            System.out.println("7. Borrow Book");
-            System.out.println("8. Return Book");
-            System.out.println("9. View Transactions");
+            System.out.println("7. Update User");
+            System.out.println("8. Delete User");
+            System.out.println("9. Borrow Book");
+            System.out.println("10. Return Book");
+            System.out.println("11. View Transactions");
             System.out.println("0. Exit");
-            System.out.print("Choice: ");
 
             choice = Integer.parseInt(scanner.nextLine());
 
             switch (choice) {
+
                 case 1 -> addBook();
                 case 2 -> bookDAO.getAllBooks().forEach(System.out::println);
                 case 3 -> updateBook();
                 case 4 -> deleteBook();
+
                 case 5 -> registerUser();
                 case 6 -> userDAO.getAllUsers().forEach(System.out::println);
-                case 7 -> borrowBook();
-                case 8 -> returnBook();
-                case 9 -> transactionDAO.viewTransactions();
+                case 7 -> updateUser();
+                case 8 -> deleteUser();
+
+                case 9 -> borrowBook();
+                case 10 -> returnBook();
+                case 11 -> transactionDAO.viewTransactions();
+
                 case 0 -> System.out.println("Goodbye!");
+
                 default -> System.out.println("Invalid choice.");
             }
         } while (choice != 0);
@@ -80,6 +88,47 @@ public class LibraryService {
         System.out.print("User name: ");
         String name = scanner.nextLine();
         System.out.println(userDAO.addUser(new User(name)) ? "Registered." : "Failed.");
+    }
+
+    private void updateUser() {
+
+        System.out.print("User ID: ");
+        int id = Integer.parseInt(scanner.nextLine());
+
+        User user = userDAO.getUserById(id);
+
+        if (user == null) {
+
+            System.out.println("User not found.");
+            return;
+        }
+
+        System.out.print("New Name: ");
+        user.setName(scanner.nextLine());
+
+        if (userDAO.updateUser(user)) {
+
+            System.out.println("User updated successfully.");
+
+        } else {
+
+            System.out.println("Failed to update user.");
+        }
+    }
+
+    private void deleteUser() {
+
+        System.out.print("User ID: ");
+        int id = Integer.parseInt(scanner.nextLine());
+
+        if (userDAO.deleteUser(id)) {
+
+            System.out.println("User deleted successfully.");
+
+        } else {
+
+            System.out.println("Failed to delete user.");
+        }
     }
 
     private void borrowBook() {
