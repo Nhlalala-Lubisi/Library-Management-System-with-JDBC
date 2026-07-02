@@ -108,17 +108,42 @@ public class UserDAO {
     // Delete a user
     public boolean deleteUser(int id) {
 
-        String sql = "DELETE FROM users WHERE id = ?";
+        String checkSql =
+                "SELECT COUNT(*) FROM transactions WHERE user_id = ?";
 
-        try (Connection connection = DatabaseConnection.getConnection();
-             PreparedStatement statement = connection.prepareStatement(sql)) {
+        String deleteSql =
+                "DELETE FROM users WHERE id = ?";
 
-            statement.setInt(1, id);
+        try (Connection connection = DatabaseConnection.getConnection()) {
 
-            return statement.executeUpdate() > 0;
+            try (PreparedStatement check =
+                         connection.prepareStatement(checkSql)) {
+
+                check.setInt(1, id);
+
+                ResultSet rs = check.executeQuery();
+
+                if (rs.next() && rs.getInt(1) > 0) {
+
+                    System.out.println("Cannot delete user because they have borrowing history.");
+
+                    return false;
+                }
+
+            }
+
+            try (PreparedStatement delete =
+                         connection.prepareStatement(deleteSql)) {
+
+                delete.setInt(1, id);
+
+                return delete.executeUpdate() > 0;
+            }
 
         } catch (SQLException e) {
-            e.printStackTrace();
+
+            System.err.println(e.getMessage());
+
         }
 
         return false;
