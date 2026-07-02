@@ -261,7 +261,7 @@ This project demonstrates:
 
 ##  Author
 
-** Nhlalala Lubisi **
+**Nhlalala Lubisi**
 
 Advanced Diploma in Information Technology (NQF 7)
 
