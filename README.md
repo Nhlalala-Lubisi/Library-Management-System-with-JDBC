@@ -189,9 +189,11 @@ Main.java
 4. Delete Book
 5. Register User
 6. View Users
-7. Borrow Book
-8. Return Book
-9. View Transactions
+7. Update User
+8. Delete User
+9. Borrow Book
+10. Return Book
+11. View Transactions
 0. Exit
 ```
 
@@ -226,9 +228,11 @@ or directly from IntelliJ IDEA.
 4. Delete Book
 5. Register User
 6. View Users
-7. Borrow Book
-8. Return Book
-9. View Transactions
+7. Update User
+8. Delete User
+9. Borrow Book
+10. Return Book
+11. View Transactions
 0. Exit
 
 Choice: 1
