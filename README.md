@@ -261,11 +261,10 @@ This project demonstrates:
 
 ##  Author
 
-**Lubisi Nhlalala**
+** Nhlalala Lubisi**
 
-Advanced Diploma in Information Technology
+Advanced Diploma in Information Technology (NQF 7)
 
-Passionate about Software Development, Artificial Intelligence, and Machine Learning.
 
 ---
 
