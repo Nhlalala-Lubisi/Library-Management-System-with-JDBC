@@ -1,10 +1,10 @@
-# 📚 Library Management System with JDBC
+#  Library Management System with JDBC
 
 A Java-based console application that demonstrates a Library Management System using Java 21, JDBC, MySQL, and Maven. The system allows librarians to manage books, users, and borrowing transactions through a menu-driven interface.
 
 ---
 
-## 📖 Project Overview
+##  Project Overview
 
 This application provides basic library management functionality, including:
 
@@ -19,25 +19,25 @@ The project follows a layered architecture by separating the application into co
 
 ---
 
-## 🚀 Features
+##  Features
 
-### 📚 Book Management
+###  Book Management
 - Add new books
 - View all books
 - Update book details
 - Delete books
 
-### 👤 User Management
+###  User Management
 - Register new users
 - View registered users
 
-### 🔄 Borrowing System
+###  Borrowing System
 - Borrow available books
 - Return borrowed books
 - Automatically update book availability
 - Store borrowing history
 
-### 💾 Database
+###  Database
 - MySQL database
 - JDBC connectivity
 - Foreign key relationships
@@ -45,7 +45,7 @@ The project follows a layered architecture by separating the application into co
 
 ---
 
-## 🛠 Technologies Used
+##  Technologies Used
 
 - Java 21
 - JDBC
@@ -56,7 +56,7 @@ The project follows a layered architecture by separating the application into co
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```
 LibraryManagementSystemWithJDBC
@@ -98,7 +98,7 @@ LibraryManagementSystemWithJDBC
 
 ---
 
-## 🗄 Database Schema
+##  Database Schema
 
 The project uses three tables:
 
@@ -130,7 +130,7 @@ The project uses three tables:
 
 ---
 
-## ⚙ Installation
+##  Installation
 
 ### 1. Clone the repository
 
@@ -178,7 +178,7 @@ Main.java
 
 ---
 
-## 📋 Application Menu
+##  Application Menu
 
 ```
 ===== Library Management System =====
@@ -197,7 +197,7 @@ Main.java
 
 ---
 
-## 🧪 Testing
+##  Testing
 
 The project includes JUnit tests for:
 
@@ -215,7 +215,7 @@ or directly from IntelliJ IDEA.
 
 ---
 
-## 📸 Sample Output
+##  Sample Output
 
 ```
 ===== Library Management System =====
@@ -244,7 +244,7 @@ Book added successfully.
 
 ---
 
-## 🎯 Learning Outcomes
+##  Learning Outcomes
 
 This project demonstrates:
 
@@ -259,7 +259,7 @@ This project demonstrates:
 
 ---
 
-## 👨‍💻 Author
+##  Author
 
 **Lubisi Nhlalala**
 
@@ -269,6 +269,6 @@ Passionate about Software Development, Artificial Intelligence, and Machine Lear
 
 ---
 
-## 📄 License
+##  License
 
 This project is intended for educational purposes.
