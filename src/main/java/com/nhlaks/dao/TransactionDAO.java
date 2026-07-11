@@ -11,9 +11,7 @@ import java.time.LocalDate;
 
 public class TransactionDAO {
 
-    /**
-     * Borrow a book.
-     */
+    //Borrow a book.
     public boolean borrowBook(int bookId, int userId) {
 
         String insertTransaction = """
