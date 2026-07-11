@@ -267,7 +267,7 @@ This project demonstrates:
 
 **Nhlalala Lubisi**
 
-Advanced Diploma in Information Technology (NQF 7)
+Vaal University of Technology - Advanced Diploma in Information Technology (NQF 7)
 
 
 ---
